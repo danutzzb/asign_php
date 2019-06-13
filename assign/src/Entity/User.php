@@ -3,13 +3,15 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM/Entity ("repositoryClass = App\Class\UserRepository")
+ * Class User
+ * @package App\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User {
     /**
      *
      * @var int
-     * @ORM\id
+     * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
@@ -55,4 +57,5 @@ class User {
        return password_verify($password, $this->hashedPassword);
     }
 }
+
 
