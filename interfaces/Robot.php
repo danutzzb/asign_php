@@ -1,5 +1,6 @@
 <?php
 
 interface Robot {
-    //put your code here
+public function start(): void;
+    public function  charge(int $level): void;
 }
